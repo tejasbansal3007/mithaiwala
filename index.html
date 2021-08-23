@@ -55,27 +55,19 @@
                     score++;
                 }
                 if (score==0){
-                    document.getElementById("result").innerHTML="आपका स्कोर ";
-                    document.getElementById("result").innerHTML=score;
-                    msg="है। आपको मिठाईवाला पाठ की तैयारी ठीक से नहीं हुई है। कृपया पाठ का संशोधन करें।"
+                    msg="आपका स्कोर " + score + " है। आपको मिठाईवाला पाठ की तैयारी ठीक से नहीं हुई है। कृपया पाठ का संशोधन करें।"
                     document.getElementById("result").innerHTML=msg;
                 }
                 if (score==1){
-                    document.getElementById("result").innerHTML="आपका स्कोर ";
-                    document.getElementById("result").innerHTML=score;
-                    msg="है। आपको पाठ की पूरी तैयारी नहीं हुई है। आप और अच्छा कर सकते हैं।"
+                    msg="आपका स्कोर " + score + " है। आपको पाठ की पूरी तैयारी नहीं हुई है। आप और अच्छा कर सकते हैं।"
                     document.getElementById("result").innerHTML=msg;
                 }
                 if (score==2){
-                    document.getElementById("result").innerHTML="आपका स्कोर ";
-                    document.getElementById("result").innerHTML=score;
-                    msg="है। आपने अच्छा प्रदर्शन किया इस quiz में लेकिन आप इससे भी अच्छा कर सकते हैं। थोड़ीसी और महनत करें।"
+                    msg="आपका स्कोर " + score + " है। आपने अच्छा प्रदर्शन किया इस quiz में लेकिन आप इससे भी अच्छा कर सकते हैं। थोड़ीसी और महनत करें।"
                     document.getElementById("result").innerHTML=msg;
                 }
                 if (score>2){
-                    document.getElementById("result").innerHTML="आपका स्कोर ";
-                    document.getElementById("result").innerHTML=score;
-                    msg="है। बहुत अच्छे। ऐसे ही जारी रखें और आप अपनी कक्षा में सर्वोत्तम बन जाएंगे।"
+                    msg="आपका स्कोर " + score + " है। बहुत अच्छे। ऐसे ही जारी रखें और आप अपनी कक्षा में सर्वोत्तम बन जाएंगे।"
                     document.getElementById("result").innerHTML=msg;
                 }
             }
