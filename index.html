@@ -1,85 +1,102 @@
 <html>
-    <head>
-        <title>मिठाईवाला पाठ से सम्बन्धित प्रश्नोत्तरी</title>
-        <style>
-            body {
-             font-size: 20px;
-             color: rgb(0, 0, 255);
-             background-image: url(download.jpg);
-             background-repeat: repeat;
-             background-size:contain;
-             text-align: center;
-            }
-         
-         button {
-          border-radius: 50%;
-          padding: 10;
-          background-color: aqua;
-          width: 180; height: 100;
-          margin: 50;
-          font-size: 30;
-          color: crimson;
-         }
-         
-         #result {
-          color: red;
-          background-color: darkslategrey;
-         }
-         
-         title {
-          color: cornflowerblue;
-         }
-         .c{
-            transform: translate(-50%, -50%);
-         }
 
-        </style>
-    </head>
-    <body>
-        <p>अगर आप कक्षा के साथ live खेल रहें हैं तो पहले fastest finger first तिकड़ी खेलें।<hr></p>
-        <div style='position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;'><iframe sandbox='allow-scripts allow-same-origin' allowfullscreen='true' allowtransparency='true' frameborder='0' height='200' src='https://www.menti.com/21wnokhg7o' style='position: absolute; top: 40%; left: 50%; width: 80%; height: 80%;' width='200 ' class="c"></iframe></div>
-        <p>नीचे दिए हुए बटन पर क्लिक करकर quiz का आरंभ करें।<br>
-        अपना उत्तर हिन्दी में दे। <br><hr>
-        इस quiz में ३ प्रश्न हैं। आपके उत्तरों के आधार पर आपको आपका feedback दिया जाएगा।<hr>यह quiz मिठाईवाला पाठ पर आधारित है।<hr></p>
-        <p id="result"></p>
-        <button onclick="test_start()" id="but" title="इसको क्लिक करने के बाद आपको ३ प्रश्नों का जवाब देना होगा।">इधर क्लिक करें</button>
-        <script>
-            function test_start(){
-                var q1 = prompt("मुरलीवाला कैसा साफ़ा पहनता था?");
-                var q2 = prompt("मुन्नू कितने पैसों में खिलौने लाया था?");
-                var q3 = prompt("चुन्नू और मुन्नू की माँ का क्या नाम था?");
-                var msg;
-                var score=0;
-                wq = [1,2,3]
-                if (q1=="बीकानेरी रंगीन साफ़ा"){
-                    score++;
-                    wq.remove(1);
-                }
-                if (q2=="२ पैसों में"){
-                    score++;
-                    wq.remove(2);
-                }
-                if (q3=="रोहिणी"){
-                    score++;
-                    wq.remove(3);
-                }
-                if (score==0){
-                    msg="आपका स्कोर " + score + " है। आपने "+wq+" प्रश्नों मे गलती करी। आपको मिठाईवाला पाठ की तैयारी ठीक से नहीं हुई है। कृपया पाठ का संशोधन करें।"
-                    document.getElementById("result").innerHTML=msg;
-                }
-                if (score==1){
-                    msg="आपका स्कोर " + score + " है। आपने "+wq+" प्रश्नों मे गलती करी। आपको पाठ की पूरी तैयारी नहीं हुई है। आप और अच्छा कर सकते हैं।"
-                    document.getElementById("result").innerHTML=msg;
-                }
-                if (score==2){
-                    msg="आपका स्कोर " + score + " है। आपने "+wq+" प्रश्नों मे गलती करी। आपने अच्छा प्रदर्शन किया इस quiz में लेकिन आप इससे भी अच्छा कर सकते हैं। थोड़ीसी और महनत करें।"
-                    document.getElementById("result").innerHTML=msg;
-                }
-                if (score>2){
-                    msg="आपका स्कोर " + score + " है। आपने कोई गलती नहीं करी। बहुत अच्छे। ऐसे ही जारी रखें और आप अपनी कक्षा में सर्वोत्तम बन जाएंगे।"
-                    document.getElementById("result").innerHTML=msg;
-                }
+<head>
+    <title>मिठाईवाला पाठ से सम्बन्धित प्रश्नोत्तरी</title>
+    <style>
+        body {
+            font-size: 20px;
+            color: rgb(0, 0, 255);
+            background-image: url(download.jpg);
+            background-repeat: repeat;
+            background-size: contain;
+            text-align: center;
+        }
+
+        button {
+            border-radius: 50%;
+            padding: 10;
+            background-color: aqua;
+            width: 180;
+            height: 100;
+            margin: 50;
+            font-size: 30;
+            color: crimson;
+        }
+
+        #result {
+            color: red;
+            background-color: darkslategrey;
+        }
+
+        title {
+            color: cornflowerblue;
+        }
+
+        .c {
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <p>अगर आप कक्षा के साथ live खेल रहें हैं तो पहले fastest finger first तिकड़ी खेलें।
+        <hr>
+    </p>
+    <div style='position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;'><iframe
+            sandbox='allow-scripts allow-same-origin' allowfullscreen='true' allowtransparency='true' frameborder='0'
+            height='200' src='https://www.menti.com/21wnokhg7o'
+            style='position: absolute; top: 40%; left: 50%; width: 80%; height: 80%;' width='200 ' class="c"></iframe>
+    </div>
+    <p>नीचे दिए हुए बटन पर क्लिक करकर quiz का आरंभ करें।<br>
+        अपना उत्तर हिन्दी में दे। <br>
+        <hr>
+        इस quiz में ३ प्रश्न हैं। आपके उत्तरों के आधार पर आपको आपका feedback दिया जाएगा।
+        <hr>यह quiz मिठाईवाला पाठ पर आधारित है।
+        <hr>
+    </p>
+    <p id="result"></p>
+    <button onclick="test_start()" id="but" title="इसको क्लिक करने के बाद आपको ३ प्रश्नों का जवाब देना होगा।">इधर क्लिक
+        करें</button>
+    <script>
+        function test_start() {
+            document.getElementById("result").innerHTML = "";
+            var q1 = prompt("मुरलीवाला कैसा साफ़ा पहनता था?");
+            var q2 = prompt("मुन्नू कितने पैसों में खिलौने लाया था?");
+            var q3 = prompt("चुन्नू और मुन्नू की माँ का क्या नाम था?");
+            var msg;
+            var score = 0;
+            wq = [1, 2, 3]
+            index = 0;
+            if (q1 == "बीकानेरी रंगीन साफ़ा") {
+                score++;
+                wq.splice(index, 1);
+            } else { index = index + 1; }
+            if (q2 == "२ पैसों में") {
+                score++;
+                wq.splice(index, 1);
+            } else { index = index + 1; }
+            if (q3 == "रोहिणी") {
+                score++;
+                wq.splice(index, 1);
+            } else { index = index + 1; }
+            if (score == 0) {
+                msg = "आपका स्कोर " + score + " है। आपने " + wq + " प्रश्नों मे गलती करी। आपको मिठाईवाला पाठ की तैयारी ठीक से नहीं हुई है। कृपया पाठ का संशोधन करें।"
+                document.getElementById("result").innerHTML = msg;
             }
-        </script>
-    </body>
+            if (score == 1) {
+                msg = "आपका स्कोर " + score + " है। आपने " + wq + " प्रश्नों मे गलती करी। आपको पाठ की पूरी तैयारी नहीं हुई है। आप और अच्छा कर सकते हैं।"
+                document.getElementById("result").innerHTML = msg;
+            }
+            if (score == 2) {
+                msg = "आपका स्कोर " + score + " है। आपने " + wq + " प्रश्नों मे गलती करी। आपने अच्छा प्रदर्शन किया इस quiz में लेकिन आप इससे भी अच्छा कर सकते हैं। थोड़ीसी और महनत करें।"
+                document.getElementById("result").innerHTML = msg;
+            }
+            if (score > 2) {
+                msg = "आपका स्कोर " + score + " है। आपने कोई गलती नहीं करी। बहुत अच्छे। ऐसे ही जारी रखें और आप अपनी कक्षा में सर्वोत्तम बन जाएंगे।"
+                document.getElementById("result").innerHTML = msg;
+            }
+        }
+    </script>
+</body>
+
 </html>
